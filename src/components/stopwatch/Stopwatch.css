@@ -2,27 +2,29 @@
     width: 100%;
     margin: auto;
     background-color: rgb(32, 30, 30);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .timer-Display {
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 40px;
     color: whitesmoke;
 }
 
-.text-content {
-    color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 4rem;
-    font-weight: bold;
-}
-
+/* Button Styling */
 .buttons {
     display: flex;
     justify-content: center;
@@ -33,45 +35,75 @@
 
 .buttons button {
     font-size: 1rem;
-    padding: 20px;
+    padding: 18px;
     width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     cursor: pointer;
+    background: linear-gradient(145deg, #3a3a3a, #2c2c2c);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(145deg, #4e4e4e, #1f1f1f);
+    color: #00ffd0;
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+    background: #111;
+}
+
+/* Table Styling */
 .table {
     margin-top: 20px;
     color: white;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .table th, .table td {
-    text-align: center;
-    background-color: #343a40;
-    color: white;
-}
-
-.table th {
-    font-weight: bold;
-    background-color: #343a40;
-    color: white;
+    padding: 14px;
     text-align: center;
 }
 
-.table tbody tr {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
+.table thead th {
+    background-color: #444;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-@media screen and (max-width: 500px)  {
+.table tbody tr:nth-child(even) {
+    background-color: #2c2f36;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #383b42;
+}
+
+.table tbody tr:hover {
+    background-color: #50535b;
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 500px) {
     .timer-Display {
         font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 4rem;
-        margin-bottom: 40px;
-        color: whitesmoke;
+        margin-top: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .buttons button {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 0.9rem;
     }
 }
-
-
